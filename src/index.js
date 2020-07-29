@@ -1,25 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './style.scss';
-import * as tw from './services/twilio-handler';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.setState({
-      sent: false,
-    });
-  }
-
   sendMessage = () => {
-    if (!this.state.sent) {
-      tw.sendMessage().then(() => {
-        this.setState({
-          sent: true,
-        });
-      });
-    }
+    console.log('Sending message');
+    fetch('https://damp-plateau-67111.herokuapp.com/send-text?')
+      .catch((err) => console.error(err));
   }
 
   render() {
