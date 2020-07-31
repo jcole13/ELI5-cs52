@@ -3,6 +3,9 @@ body, html {
     color: red;
     background: linear-gradient(to bottom, #87e0fd 0%,#53cbf1 40%,#FF595E 100%);
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .logo {
@@ -12,3 +15,22 @@ body, html {
     background-repeat: no-repeat;
     background-size: contain;
   }
+
+button {
+    cursor: pointer;
+    border-style: none;
+    border-radius: 20px;
+    height: 150px;
+    width: 320px;
+    transition: all 0.5s ease-in-out 0s;
+    margin-top: 10%;
+}
+
+button:hover {
+    filter: brightness(90%);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+h1 {
+    text-align: center;
+}
